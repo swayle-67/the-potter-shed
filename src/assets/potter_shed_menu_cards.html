@@ -1,0 +1,78 @@
+
+<style>
+  .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: #e8e0d4; }
+  .menu-card { background: #fff8f4; padding: 2rem 1.75rem; position: relative; }
+  .menu-card-label { font-family: 'Manrope', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #944a00; margin-bottom: 1rem; }
+  .menu-card-title { font-family: 'EB Garamond', Georgia, serif; font-size: 1.6rem; font-weight: 400; color: #010101; margin-bottom: 1.25rem; line-height: 1.1; }
+  .menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.55rem 0; border-bottom: 0.5px solid #ece1d6; gap: 1rem; }
+  .menu-item:last-child { border-bottom: none; }
+  .item-name { font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 500; color: #201b14; }
+  .item-desc { font-family: 'Manrope', sans-serif; font-size: 11px; color: #747878; margin-top: 2px; }
+  .item-price { font-family: 'EB Garamond', Georgia, serif; font-size: 15px; color: #944a00; white-space: nowrap; flex-shrink: 0; }
+  .item-badge { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: #ffdcc5; color: #663100; padding: 2px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+  .corner-mark { position: absolute; top: 14px; right: 14px; width: 8px; height: 8px; border-top: 1px solid #c4c7c7; border-right: 1px solid #c4c7c7; }
+</style>
+
+<div class="menu-grid">
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">Morning</div>
+    <div class="menu-card-title">Breakfast</div>
+    <div class="menu-item"><div><div class="item-name">Full Shed Breakfast</div><div class="item-desc">Eggs, bacon, sausage, toast, grilled tomato</div></div><div class="item-price">R185</div></div>
+    <div class="menu-item"><div><div class="item-name">Avocado Toast <span class="item-badge">Popular</span></div><div class="item-desc">Sourdough, avo, poached egg, feta</div></div><div class="item-price">R145</div></div>
+    <div class="menu-item"><div><div class="item-name">French Toast</div><div class="item-desc">Brioche, maple syrup, seasonal berries</div></div><div class="item-price">R135</div></div>
+    <div class="menu-item"><div><div class="item-name">Granola Bowl</div><div class="item-desc">House granola, yoghurt, honey, fruit</div></div><div class="item-price">R110</div></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">All Day</div>
+    <div class="menu-card-title">All-Day Eats</div>
+    <div class="menu-item"><div><div class="item-name">Potter Club Sandwich</div><div class="item-desc">Chicken, bacon, egg, lettuce, mayo</div></div><div class="item-price">R175</div></div>
+    <div class="menu-item"><div><div class="item-name">Garden Salad <span class="item-badge">Vegan</span></div><div class="item-desc">Seasonal leaves, seeds, lemon dressing</div></div><div class="item-price">R120</div></div>
+    <div class="menu-item"><div><div class="item-name">Quiche of the Day</div><div class="item-desc">Ask your server for today's filling</div></div><div class="item-price">R140</div></div>
+    <div class="menu-item"><div><div class="item-name">Soup & Bread</div><div class="item-desc">Slow-cooked seasonal soup, crusty roll</div></div><div class="item-price">R105</div></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">Mains</div>
+    <div class="menu-card-title">Burgers</div>
+    <div class="menu-item"><div><div class="item-name">Shed Smash Burger <span class="item-badge">Best Seller</span></div><div class="item-desc">Double smash, cheddar, special sauce</div></div><div class="item-price">R195</div></div>
+    <div class="menu-item"><div><div class="item-name">Mushroom Swiss</div><div class="item-desc">Beef patty, sautéed mushrooms, gruyère</div></div><div class="item-price">R185</div></div>
+    <div class="menu-item"><div><div class="item-name">Crispy Chicken Burger</div><div class="item-desc">Buttermilk chicken, slaw, pickles</div></div><div class="item-price">R175</div></div>
+    <div class="menu-item"><div><div class="item-name">Plant Burger <span class="item-badge">Vegan</span></div><div class="item-desc">Beyond patty, avocado, tomato relish</div></div><div class="item-price">R175</div></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">Little Ones</div>
+    <div class="menu-card-title">Kids</div>
+    <div class="menu-item"><div><div class="item-name">Mini Cheeseburger</div><div class="item-desc">Beef patty, cheese, ketchup, fries</div></div><div class="item-price">R95</div></div>
+    <div class="menu-item"><div><div class="item-name">Mac & Cheese</div><div class="item-desc">Creamy cheddar, pasta, breadcrumb top</div></div><div class="item-price">R85</div></div>
+    <div class="menu-item"><div><div class="item-name">Chicken Strips</div><div class="item-desc">Crumbed chicken, dipping sauce, fries</div></div><div class="item-price">R95</div></div>
+    <div class="menu-item"><div><div class="item-name">Pancakes</div><div class="item-desc">Three pancakes, maple syrup, banana</div></div><div class="item-price">R80</div></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">Stone Baked</div>
+    <div class="menu-card-title">Pizza (Vegan)</div>
+    <div class="menu-item"><div><div class="item-name">Roasted Veg <span class="item-badge">Vegan</span></div><div class="item-desc">Peppers, zucchini, red onion, olive oil</div></div><div class="item-price">R165</div></div>
+    <div class="menu-item"><div><div class="item-name">Cashew Pesto <span class="item-badge">Vegan</span></div><div class="item-desc">House pesto, cherry tomato, rocket</div></div><div class="item-price">R160</div></div>
+    <div class="menu-item"><div><div class="item-name">Spicy Arrabbiata <span class="item-badge">Vegan</span></div><div class="item-desc">Chilli tomato, olives, capers</div></div><div class="item-price">R155</div></div>
+    <div class="menu-item"><div><div class="item-name">Mushroom Truffle <span class="item-badge">Vegan</span></div><div class="item-desc">Wild mushrooms, truffle oil, thyme</div></div><div class="item-price">R175</div></div>
+  </div>
+
+  <div class="menu-card">
+    <div class="corner-mark"></div>
+    <div class="menu-card-label">Stone Baked</div>
+    <div class="menu-card-title">Pizza</div>
+    <div class="menu-item"><div><div class="item-name">Margherita</div><div class="item-desc">San Marzano tomato, fior di latte, basil</div></div><div class="item-price">R155</div></div>
+    <div class="menu-item"><div><div class="item-name">Pepperoni <span class="item-badge">Popular</span></div><div class="item-desc">Double pepperoni, mozzarella, oregano</div></div><div class="item-price">R175</div></div>
+    <div class="menu-item"><div><div class="item-name">BBQ Chicken</div><div class="item-desc">Pulled chicken, BBQ base, red onion</div></div><div class="item-price">R180</div></div>
+    <div class="menu-item"><div><div class="item-name">Four Cheese</div><div class="item-desc">Mozzarella, gorgonzola, brie, parmesan</div></div><div class="item-price">R185</div></div>
+  </div>
+
+</div>
