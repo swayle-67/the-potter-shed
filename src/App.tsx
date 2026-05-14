@@ -24,13 +24,6 @@ import {
   Eye
 } from 'lucide-react';
 
-import menu1 from './assets/menu-1.png';
-import menu2 from './assets/menu-2.png';
-import menu3 from './assets/menu-3.png';
-import menu4 from './assets/menu-4.png';
-import menu5 from './assets/menu-5.png';
-import menu6 from './assets/menu-6.png';
-
 // --- Components ---
 
 const Header = ({ onOpenMenu, onReserve }: { onOpenMenu: () => void, onReserve: () => void }) => (
@@ -144,36 +137,87 @@ const Hero = ({ onReserve, onViewMenu }: { onReserve: () => void, onViewMenu: ()
   </section>
 );
 
-const Collection = () => {
-  const items = [
-    { label: 'Breakfast', img: menu1 },
-    { label: 'All-Day Eats', img: menu2 },
-    { label: 'Burgers', img: menu3 },
-    { label: 'Kids', img: menu4 },
-    { label: 'Pizza (Vegan)', img: menu5 },
-    { label: 'Pizza', img: menu6 },
-  ];
+const Collection = () => (
+  <section id="menu" className="px-5 py-24 max-w-7xl mx-auto scroll-mt-24">
+    <h2 className="font-headline text-3xl text-center mb-12">Our Menu</h2>
+    <style>{`
+      .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: #e8e0d4; }
+      .menu-card { background: #fff8f4; padding: 2rem 1.75rem; position: relative; }
+      .menu-card-label { font-family: 'Manrope', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #944a00; margin-bottom: 1rem; }
+      .menu-card-title { font-family: 'EB Garamond', Georgia, serif; font-size: 1.6rem; font-weight: 400; color: #010101; margin-bottom: 1.25rem; line-height: 1.1; }
+      .menu-item { display: flex; justify-content: space-between; align-items: baseline; padding: 0.55rem 0; border-bottom: 0.5px solid #ece1d6; gap: 1rem; }
+      .menu-item:last-child { border-bottom: none; }
+      .item-name { font-family: 'Manrope', sans-serif; font-size: 13px; font-weight: 500; color: #201b14; }
+      .item-desc { font-family: 'Manrope', sans-serif; font-size: 11px; color: #747878; margin-top: 2px; }
+      .item-price { font-family: 'EB Garamond', Georgia, serif; font-size: 15px; color: #944a00; white-space: nowrap; flex-shrink: 0; }
+      .item-badge { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: #ffdcc5; color: #663100; padding: 2px 7px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+      .corner-mark { position: absolute; top: 14px; right: 14px; width: 8px; height: 8px; border-top: 1px solid #c4c7c7; border-right: 1px solid #c4c7c7; }
+    `}</style>
+    <div className="menu-grid">
 
-  return (
-    <section id="menu" className="px-5 py-24 max-w-7xl mx-auto scroll-mt-24">
-      <h2 className="font-headline text-3xl text-center mb-12">Our Menu</h2>
-      <div className="grid grid-cols-2 gap-4">
-        {items.map((item, idx) => (
-          <div key={idx} className="group relative overflow-hidden rounded-xl bg-surface-container mb-4">
-            <img
-              className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
-              src={item.img}
-              alt={item.label}
-            />
-            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
-              <span className="text-white font-headline text-lg">{item.label}</span>
-            </div>
-          </div>
-        ))}
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">Morning</div>
+        <div className="menu-card-title">Breakfast</div>
+        <div className="menu-item"><div><div className="item-name">Full Shed Breakfast</div><div className="item-desc">Eggs, bacon, sausage, toast, grilled tomato</div></div><div className="item-price">R185</div></div>
+        <div className="menu-item"><div><div className="item-name">Avocado Toast <span className="item-badge">Popular</span></div><div className="item-desc">Sourdough, avo, poached egg, feta</div></div><div className="item-price">R145</div></div>
+        <div className="menu-item"><div><div className="item-name">French Toast</div><div className="item-desc">Brioche, maple syrup, seasonal berries</div></div><div className="item-price">R135</div></div>
+        <div className="menu-item"><div><div className="item-name">Granola Bowl</div><div className="item-desc">House granola, yoghurt, honey, fruit</div></div><div className="item-price">R110</div></div>
       </div>
-    </section>
-  );
-};
+
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">All Day</div>
+        <div className="menu-card-title">All-Day Eats</div>
+        <div className="menu-item"><div><div className="item-name">Potter Club Sandwich</div><div className="item-desc">Chicken, bacon, egg, lettuce, mayo</div></div><div className="item-price">R175</div></div>
+        <div className="menu-item"><div><div className="item-name">Garden Salad <span className="item-badge">Vegan</span></div><div className="item-desc">Seasonal leaves, seeds, lemon dressing</div></div><div className="item-price">R120</div></div>
+        <div className="menu-item"><div><div className="item-name">Quiche of the Day</div><div className="item-desc">Ask your server for today's filling</div></div><div className="item-price">R140</div></div>
+        <div className="menu-item"><div><div className="item-name">Soup & Bread</div><div className="item-desc">Slow-cooked seasonal soup, crusty roll</div></div><div className="item-price">R105</div></div>
+      </div>
+
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">Mains</div>
+        <div className="menu-card-title">Burgers</div>
+        <div className="menu-item"><div><div className="item-name">Shed Smash Burger <span className="item-badge">Best Seller</span></div><div className="item-desc">Double smash, cheddar, special sauce</div></div><div className="item-price">R195</div></div>
+        <div className="menu-item"><div><div className="item-name">Mushroom Swiss</div><div className="item-desc">Beef patty, sautéed mushrooms, gruyère</div></div><div className="item-price">R185</div></div>
+        <div className="menu-item"><div><div className="item-name">Crispy Chicken Burger</div><div className="item-desc">Buttermilk chicken, slaw, pickles</div></div><div className="item-price">R175</div></div>
+        <div className="menu-item"><div><div className="item-name">Plant Burger <span className="item-badge">Vegan</span></div><div className="item-desc">Beyond patty, avocado, tomato relish</div></div><div className="item-price">R175</div></div>
+      </div>
+
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">Little Ones</div>
+        <div className="menu-card-title">Kids</div>
+        <div className="menu-item"><div><div className="item-name">Mini Cheeseburger</div><div className="item-desc">Beef patty, cheese, ketchup, fries</div></div><div className="item-price">R95</div></div>
+        <div className="menu-item"><div><div className="item-name">Mac & Cheese</div><div className="item-desc">Creamy cheddar, pasta, breadcrumb top</div></div><div className="item-price">R85</div></div>
+        <div className="menu-item"><div><div className="item-name">Chicken Strips</div><div className="item-desc">Crumbed chicken, dipping sauce, fries</div></div><div className="item-price">R95</div></div>
+        <div className="menu-item"><div><div className="item-name">Pancakes</div><div className="item-desc">Three pancakes, maple syrup, banana</div></div><div className="item-price">R80</div></div>
+      </div>
+
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">Stone Baked</div>
+        <div className="menu-card-title">Pizza (Vegan)</div>
+        <div className="menu-item"><div><div className="item-name">Roasted Veg <span className="item-badge">Vegan</span></div><div className="item-desc">Peppers, zucchini, red onion, olive oil</div></div><div className="item-price">R165</div></div>
+        <div className="menu-item"><div><div className="item-name">Cashew Pesto <span className="item-badge">Vegan</span></div><div className="item-desc">House pesto, cherry tomato, rocket</div></div><div className="item-price">R160</div></div>
+        <div className="menu-item"><div><div className="item-name">Spicy Arrabbiata <span className="item-badge">Vegan</span></div><div className="item-desc">Chilli tomato, olives, capers</div></div><div className="item-price">R155</div></div>
+        <div className="menu-item"><div><div className="item-name">Mushroom Truffle <span className="item-badge">Vegan</span></div><div className="item-desc">Wild mushrooms, truffle oil, thyme</div></div><div className="item-price">R175</div></div>
+      </div>
+
+      <div className="menu-card">
+        <div className="corner-mark"></div>
+        <div className="menu-card-label">Stone Baked</div>
+        <div className="menu-card-title">Pizza</div>
+        <div className="menu-item"><div><div className="item-name">Margherita</div><div className="item-desc">San Marzano tomato, fior di latte, basil</div></div><div className="item-price">R155</div></div>
+        <div className="menu-item"><div><div className="item-name">Pepperoni <span className="item-badge">Popular</span></div><div className="item-desc">Double pepperoni, mozzarella, oregano</div></div><div className="item-price">R175</div></div>
+        <div className="menu-item"><div><div className="item-name">BBQ Chicken</div><div className="item-desc">Pulled chicken, BBQ base, red onion</div></div><div className="item-price">R180</div></div>
+        <div className="menu-item"><div><div className="item-name">Four Cheese</div><div className="item-desc">Mozzarella, gorgonzola, brie, parmesan</div></div><div className="item-price">R185</div></div>
+      </div>
+
+    </div>
+  </section>
+);
 
 const DiningEvents = () => (
   <section id="events" className="bg-surface-container py-24 px-5 scroll-mt-24">
